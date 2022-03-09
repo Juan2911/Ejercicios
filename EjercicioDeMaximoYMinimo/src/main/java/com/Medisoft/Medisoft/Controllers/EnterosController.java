@@ -22,9 +22,9 @@ public class EnterosController {
             produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<Integer>> calcularMaximosYMinimos(@RequestBody TransactionRequest transactionRequest) {
 
-        maximosYMinimosServiceImpl.maximosYMinimos(transactionRequest);
+        List<Integer> integers = maximosYMinimosServiceImpl.maximosYMinimos(transactionRequest);
 
-        return new ResponseEntity<>(null, HttpStatus.OK);
+        return new ResponseEntity<>(integers, HttpStatus.OK);
     }
 
 }
