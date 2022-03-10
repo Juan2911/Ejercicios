@@ -1,5 +1,6 @@
 package com.Medisoft.Medisoft.Controllers;
 
+import com.Medisoft.Medisoft.Domain.ResultadoUnElemento;
 import com.Medisoft.Medisoft.Domain.TransactionRequest;
 import com.Medisoft.Medisoft.Services.PotenciaService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,6 +9,7 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -16,15 +18,15 @@ import java.util.List;
 public class NumerosController {
 
     @Autowired
-    private PotenciaService potenciaServiceImpl;
+    private PotenciaService potenciaImpl;
 
     @PostMapping(value = "/Potencia", consumes = MediaType.APPLICATION_JSON_VALUE,
             produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<List<Float>> calcularPotencias(@RequestBody TransactionRequest transactionRequest) {
+    public ResponseEntity<List<ResultadoUnElemento>> calcularPotencias(@RequestBody TransactionRequest transactionRequest) {
 
-        potenciaServiceImpl.maximosYMinimos(transactionRequest);
+        List<ResultadoUnElemento> resultado = potenciaImpl.maximosYMinimos(transactionRequest);
 
-        return new ResponseEntity<>(null, HttpStatus.OK);
+        return new ResponseEntity<>(resultado, HttpStatus.OK);
     }
 
 }

@@ -13,6 +13,16 @@ public class PotenciaImpl implements PotenciaService {
 
     @Override
     public List<ResultadoUnElemento> maximosYMinimos(TransactionRequest transactionRequest) {
-        return null;
+        Float resultado;
+        List<Float> valor = transactionRequest.getNumeros();
+        List<ResultadoUnElemento> datos = new ArrayList<>();
+        for (int i = 0; i < valor.size(); i++) {
+            ResultadoUnElemento resultadoUnElemento = new ResultadoUnElemento();
+            resultado = valor.get(i) * valor.get(i);
+            resultadoUnElemento.setNumero(valor.get(i));
+            resultadoUnElemento.setPotencia(resultado);
+            datos.add(resultadoUnElemento);
+        }
+        return datos;
     }
 }

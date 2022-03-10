@@ -13,19 +13,49 @@ Datos de ejemplo:
 }
 
 Resultado Esperado
-
+[
 {
-  [
-    2.25,
-    11.56,
-    2809.0,
-    5625.0,
-    96.04,
-    5.4756,
-    1.0,
-    25.0,
-    49.0,
-    10.240001,
-    81.0
-  ]
+"numero": 1.5,
+"potencia": 2.25
+},
+{
+"numero": 3.4,
+"potencia": 11.56
+},
+{
+"numero": 53,
+"potencia": 2809
+},
+{
+"numero": 75,
+"potencia": 5625
+},
+{
+"numero": 9.8,
+"potencia": 96.04
+},
+{
+"numero": 2.34,
+"potencia": 5.4756
+},
+{
+"numero": 1,
+"potencia": 1
+},
+{
+"numero": 5,
+"potencia": 25
+},
+{
+"numero": 7,
+"potencia": 49
+},
+{
+"numero": 3.2,
+"potencia": 10.240001
+},
+{
+"numero": 9,
+"potencia": 81
 }
+]
