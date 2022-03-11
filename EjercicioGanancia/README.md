@@ -1,5 +1,6 @@
 ﻿# newTest
-se recibe como parametro una lista de empleados con nombre y sueldo neto. se solicita que devuelva una lista con nombre, descuento y sueldo bruto.
+se recibe como parametro una lista de empleados con nombre y sueldo neto. 
+Se solicita que devuelva una lista con nombre, descuento y sueldo bruto.
 solo aquellos sueldos que son superior a 50000.00
 donde el descuento será el 7% del sueldo
 el sueldo bruto será igual al sueldo neto - el descuento
