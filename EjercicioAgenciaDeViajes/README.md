@@ -1,5 +1,5 @@
 ﻿# newTest
-En este ejercicio se puede acceder a cualquier ejercicio previo para poder realizarlo, sepa que se le realizarán preguntas para fundamentar lo que esta realizado
+En este ejercicio se puede acceder a cualquier ejercicio previo para poder realizarlo , sepa que se le realizarán preguntas para fundamentar lo que esta realizado
 puede copiar codigo, pero hacemos la misma aclaración, habrá preguntas sobre el código.
 
 El ejercicio se trata de una agencia de viajes, donde solo se realizará la funcionalidad de buscar detalles de vuelos agendados.
@@ -19,6 +19,8 @@ siendo
     tipoDeTarifa 1 ; DescripcionDeTarifa = Niño      ; Tarifa = 7500.00
     tipoDeTarifa 2 ; DescripcionDeTarifa = Adulto    ; Tarifa = TarifaNiño + 30 % de TarifaNiño 
     tipoDeTarifa 3 ; DescripcionDeTarifa = Jubilado  ; Tarifa = TarifaNiño - 10 %  
+
+AYUDA: los ejercicios de los cuales puede acceder,para baserse o copiar existen en g:\Federico\Ejercicios
 
 Datos de ejemplo:
 {
