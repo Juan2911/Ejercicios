@@ -6,5 +6,5 @@ import com.Medisoft.Medisoft.Domain.ResultadoPasajeros;
 import java.util.List;
 
 public interface PasajerosService {
-    List<ResultadoPasajeros> datosPasajeros(RequestPasajeros requestPasajeros);
+    List<ResultadoPasajeros> obtenerDatosDePasajeros(RequestPasajeros requestPasajeros);
 }

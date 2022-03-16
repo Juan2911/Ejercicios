@@ -25,8 +25,10 @@ public class PasajerosController {
 
     @PostMapping(value = "/pasajeros", consumes = MediaType.APPLICATION_JSON_VALUE,
             produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<List<ResultadoPasajeros>> verPasajeros(@RequestBody RequestPasajeros requestPasajeros){
-        List<ResultadoPasajeros> pasajeros = pasajerosServiceImpl.datosPasajeros(requestPasajeros);
+    public ResponseEntity<List<ResultadoPasajeros>> verPasajeros(@RequestBody RequestPasajeros requestPasajeros) {
+
+        List<ResultadoPasajeros> pasajeros = pasajerosServiceImpl.obtenerDatosDePasajeros(requestPasajeros);
+
         return new ResponseEntity<>(pasajeros, HttpStatus.OK);
 
     }

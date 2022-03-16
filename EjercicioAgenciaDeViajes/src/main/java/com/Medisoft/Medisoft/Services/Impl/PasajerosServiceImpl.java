@@ -13,34 +13,33 @@ import java.util.List;
 public class PasajerosServiceImpl implements PasajerosService {
 
     @Override
-    public List<ResultadoPasajeros> datosPasajeros(RequestPasajeros requestPasajeros) {
-        List<Pasajeros> datos = requestPasajeros.getPasajeros();
-        List<ResultadoPasajeros> resultadoDatos = new ArrayList<>();
-        for (Pasajeros pasajeros : datos) {
+    public List<ResultadoPasajeros> obtenerDatosDePasajeros(RequestPasajeros requestPasajeros) {
+        List<Pasajeros> pasajerosDeAgencia = requestPasajeros.getPasajeros();
+        List<ResultadoPasajeros> detalleDePasajero = new ArrayList<>();
+        for (Pasajeros pasajeros : pasajerosDeAgencia) {
             ResultadoPasajeros resultadoPasajeros = new ResultadoPasajeros();
             double tarifaNino = 7500.00;
-            if (pasajeros.getTipoTarifa() == 1){
-                resultadoPasajeros.setNombre(pasajeros.getNombre());
+            resultadoPasajeros.setNombre(pasajeros.getNombre());
+            if (pasajeros.getTipoTarifa() == 1) {
                 resultadoPasajeros.setDescripcionDeTarifa("Niño");
                 resultadoPasajeros.setTarifa(tarifaNino);
-                resultadoDatos.add(resultadoPasajeros);
-            } else if (pasajeros.getTipoTarifa() == 2) {
-                resultadoPasajeros.setNombre(pasajeros.getNombre());
+                detalleDePasajero.add(resultadoPasajeros);
+            }
+            if (pasajeros.getTipoTarifa() == 2) {
+
                 resultadoPasajeros.setDescripcionDeTarifa("Adulto");
                 double valorAdulto = tarifaNino * 30 / 100;
                 resultadoPasajeros.setTarifa(tarifaNino + valorAdulto);
-                resultadoDatos.add(resultadoPasajeros);
-            } else {
-                if (pasajeros.getTipoTarifa() == 3){
-                    resultadoPasajeros.setNombre(pasajeros.getNombre());
-                    resultadoPasajeros.setDescripcionDeTarifa("Jubilado");
-                    double valorJubilado = tarifaNino * 10 / 100;
-                    resultadoPasajeros.setTarifa(tarifaNino - valorJubilado);
-                    resultadoDatos.add(resultadoPasajeros);
-                }
+                detalleDePasajero.add(resultadoPasajeros);
             }
-
+            if (pasajeros.getTipoTarifa() == 3) {
+                resultadoPasajeros.setDescripcionDeTarifa("Jubilado");
+                double valorJubilado = tarifaNino * 10 / 100;
+                resultadoPasajeros.setTarifa(tarifaNino - valorJubilado);
+                detalleDePasajero.add(resultadoPasajeros);
+            }
         }
-        return resultadoDatos;
+
+        return detalleDePasajero;
     }
 }

@@ -4,8 +4,10 @@ public class Pasajeros {
     private String nombre;
     private int tipoTarifa;
 
-    public Pasajeros(){}
-    public Pasajeros(String nombre, int tipoTarifa){
+    public Pasajeros() {
+    }
+
+    public Pasajeros(String nombre, int tipoTarifa) {
         this.nombre = nombre;
         this.tipoTarifa = tipoTarifa;
     }

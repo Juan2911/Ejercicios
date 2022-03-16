@@ -5,8 +5,10 @@ public class ResultadoPasajeros {
     private String DescripcionDeTarifa;
     private double tarifa;
 
-    public ResultadoPasajeros(){}
-    public ResultadoPasajeros (String nombre, String DescripcionDeTarifa, double tarifa){
+    public ResultadoPasajeros() {
+    }
+
+    public ResultadoPasajeros(String nombre, String DescripcionDeTarifa, double tarifa) {
         this.nombre = nombre;
         this.DescripcionDeTarifa = DescripcionDeTarifa;
         this.tarifa = tarifa;
