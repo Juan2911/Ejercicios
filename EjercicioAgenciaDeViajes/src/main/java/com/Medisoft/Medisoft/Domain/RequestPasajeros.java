@@ -8,4 +8,8 @@ public class RequestPasajeros {
     public List<Pasajeros> getPasajeros() {
         return pasajeros;
     }
+
+    public void setPasajeros(List<Pasajeros> pasajeros) {
+        this.pasajeros = pasajeros;
+    }
 }
