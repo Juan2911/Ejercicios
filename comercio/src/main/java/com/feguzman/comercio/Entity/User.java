@@ -1,8 +1,9 @@
 package com.feguzman.comercio.Entity;
 
-import jakarta.persistence.*;
 import lombok.Builder;
 import lombok.Data;
+
+import javax.persistence.*;
 
 @Builder
 @Data
@@ -10,7 +11,7 @@ import lombok.Data;
 @Table(name = "User")
 public class User {
     @Id
-    @GeneratedValue (strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private int id;
 

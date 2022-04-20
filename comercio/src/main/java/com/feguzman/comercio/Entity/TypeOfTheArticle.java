@@ -1,8 +1,9 @@
 package com.feguzman.comercio.Entity;
 
-import jakarta.persistence.*;
 import lombok.Builder;
 import lombok.Data;
+
+import javax.persistence.*;
 
 @Builder
 @Data
