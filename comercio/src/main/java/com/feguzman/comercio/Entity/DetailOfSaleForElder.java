@@ -22,8 +22,8 @@ public class DetailOfSaleForElder {
     private int unitQuantity;
 
     @Column(name = "cost")
-    private int cost;
+    private double cost;
 
     @Column(name = "totalCost")
-    private int totalCost;
+    private double totalCost;
 }

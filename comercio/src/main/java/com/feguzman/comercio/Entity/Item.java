@@ -18,7 +18,7 @@ public class Item {
     private String description;
 
     @Column(name = "costToBuy")
-    private int costToBuy;
+    private double costToBuy;
 
     @OneToOne
     private Supplier supplier;

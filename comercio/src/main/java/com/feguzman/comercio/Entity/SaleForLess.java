@@ -36,5 +36,6 @@ public class SaleForLess {
     private List<DetailOfSaleForLess> detailOfSaleForLess;
 
     @Column(name = "totalOfSaleForLess")
-    private int totalOfSaleForLess;
+    private double totalOfSaleForLess;
+
 }
